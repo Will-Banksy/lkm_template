@@ -17,8 +17,7 @@ done;
 
 bsrc_sdelim=${bsrc_arr[@]}
 
-makefile=$(echo 'KERNEL := ~/rpisrc/linux
-PWD := $(shell pwd)
+makefile=$(echo 'PWD := $(shell pwd)
 obj-m += %TARGET%.o
 %TARGET%-y += %OBJECTS%
 
