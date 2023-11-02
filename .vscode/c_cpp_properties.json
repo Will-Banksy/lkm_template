@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "~/rpisrc/linux/include",
+                "~/rpisrc/linux/include/uapi",
+                "~/rpisrc/linux/arch/arm/include",
+                "~/rpisrc/linux/arch/arm/include/uapi",
+                "~/rpisrc/linux/arch/arm/include/generated",
+                "~/rpisrc/linux/arch/arm/include/generated/uapi"
+            ],
+            "defines": [
+                "__GNUC__",
+                "__KERNEL__",
+                "KBUILD_MODNAME=\"${workspaceFolderBasename}\""
+            ],
+            "intelliSenseMode": "linux-gcc-arm",
+            "compilerPath": "~/rpi_tools/arm-bcm2708/arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++11"
+        }
+    ],
+    "version": 4
+}
