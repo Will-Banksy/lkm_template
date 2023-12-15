@@ -2,7 +2,7 @@
 
 A generic project template for developing Linux Kernel Modules (LKMs), specifically enabling out of source tree builds. I'm a beginner with LKMs so I don't really know what I'm doing but this works for me so far, but there may be errors or bad design decisions.
 
-There is a c_cpp_properties.json file for configuring intellisense in vscode, which should just work - *provided* the linux source code can be found at ~/rpisrc/linux and the raspberrypi/tools repository can be found at ~/rpi_tools (if not, just change the include paths and compiler path in the json file to reflect the actual locations).
+There is a c_cpp_properties.json file for configuring intellisense in vscode, which should just work - *provided* the linux source code can be found at toolchain/linux and the raspberrypi/tools repository can be found at toolchain/tools (if not, just change the include paths and compiler path in the json file to reflect the actual locations, or make use of symlinks).
 
 ## Compilation
 
@@ -24,7 +24,7 @@ make KERNEL=<path_to_kernel_src> CROSS=<path_to_raspberrypi/tools>/arm-bcm2708/a
 ```
 Where `<path_to_kernel_src>` is the path to the source code of linux of the version that you want to build against, and `<path_to_raspberrypi/tools>` is the path to where you've cloned [https://github.com/raspberrypi/tools](https://github.com/raspberrypi/tools).
 
-E.g. `make KERNEL=~/rpisrc/linux CROSS=~/rpi_tools/arm-bcm2708/arm-linux-gnueabihf/bin/arm-linux-gnueabihf-`
+E.g. `make KERNEL=toolchain/linux CROSS=toolchain/tools/arm-bcm2708/arm-linux-gnueabihf/bin/arm-linux-gnueabihf-`
 
 This will invoke the compilation process to produce a kernel module (.ko) file in target, which is then copied into the project root directory.
 
